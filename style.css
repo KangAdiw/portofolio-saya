@@ -1,0 +1,88 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f4f4; /* Warna abu-abu sangat muda */
+  font-family: Arial, sans-serif; /* Jika Arial tidak ada, pakai sans-serif apapun */
+  color: #333; /* Warna teks abu-abu tua, lebih nyaman dibaca daripada hitam pekat */
+}
+
+main {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+/* .about-me-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+} */
+
+.profile-picture {
+  flex-basis: 200px; /* Beri lebar dasar untuk kolom gambar */
+  flex-shrink: 0; /* Jangan biarkan gambar menyusut */
+}
+
+.profile-bio {
+  flex-grow: 1; /* Biarkan kolom bio ini tumbuh mengisi sisa ruang */
+}
+
+.profile-picture img {
+  width: 100%;
+  border-radius: 50%; /* Membuat gambar menjadi bulat, keren kan? */
+}
+
+h1 {
+  color: #0056b3;
+}
+
+section {
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.contact-form {
+  background-color: #e9ecef;
+  padding: 15;
+  border-radius: 5px;
+}
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  width: 100%; /* Buat semua elemen input memenuhi lebar form */
+  padding: 10px; /* Beri ruang di dalam input agar teks tidak menempel di tepi */
+  margin-bottom: 15px; /* Beri jarak di bawah setiap elemen */
+}
+
+.hobi-list {
+  /* Asumsikan Anda memberi class="hobi-list" pada <ul> */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 kolom sama besar */
+  gap: 15px;
+  list-style: none; /* Hilangkan bullet point */
+  padding: 0;
+}
+
+/* Style default (mobile) */
+.about-me-container {
+  display: flex;
+  flex-direction: column; /* Susun dari atas ke bawah di mobile */
+  align-items: center;
+  gap: 20px;
+}
+
+/* Style untuk layar lebih besar (desktop) */
+@media (min-width: 768px) {
+  .about-me-container {
+    flex-direction: row; /* Kembali ke baris di layar lebar */
+    align-items: center;
+    gap: 30px;
+  }
+}
